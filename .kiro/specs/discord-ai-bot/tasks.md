@@ -80,27 +80,37 @@
     - Tester TransformerBlock complet
     - _Requirements: 6.1_
 
-- [ ] 4. Implémenter le modèle GPT complet
-  - [ ] 4.1 Créer la classe GPTModel
+- [x] 4. Implémenter le modèle GPT complet
+
+
+
+
+  - [x] 4.1 Créer la classe GPTModel
+
+
     - Implémenter les embeddings (token + positional)
     - Empiler N TransformerBlocks
     - Ajouter la couche de sortie (projection vers vocabulaire)
     - Implémenter forward()
     - _Requirements: 2.1, 2.2_
   
-  - [ ] 4.2 Implémenter la génération de texte
+  - [x] 4.2 Implémenter la génération de texte
+
     - Créer generate() avec sampling par température
     - Implémenter greedy decoding
     - Gérer la longueur maximale de génération
     - _Requirements: 2.4_
   
-  - [ ] 4.3 Ajouter la sauvegarde/chargement du modèle
+  - [x] 4.3 Ajouter la sauvegarde/chargement du modèle
+
     - Implémenter save() pour sauvegarder les poids
     - Implémenter load() pour charger les poids
     - Utiliser pickle ou numpy pour la persistence
     - _Requirements: 2.5_
   
-  - [ ] 4.4 Créer les tests unitaires du modèle GPT
+  - [x] 4.4 Créer les tests unitaires du modèle GPT
+
+
     - Tester forward pass avec des entrées aléatoires
     - Tester la génération de texte
     - Tester save/load
