@@ -116,26 +116,49 @@
     - Tester save/load
     - _Requirements: 6.1_
 
-- [ ] 5. Implémenter le système d'entraînement
-  - [ ] 5.1 Créer la classe ConversationDataset
+- [x] 5. Implémenter le système d'entraînement
+
+
+
+
+
+  - [x] 5.1 Créer la classe ConversationDataset
+
+
     - Implémenter __init__, __len__, __getitem__
     - Charger les conversations depuis JSON
     - Prétraiter les données (tokenization, padding)
     - _Requirements: 3.2_
   
-  - [ ] 5.2 Créer la classe GPTTrainer
+  - [x] 5.2 Créer la classe GPTTrainer
+
+
     - Implémenter la boucle d'entraînement
     - Calculer la loss (cross-entropy)
     - Implémenter la backpropagation (gradient descent)
     - Afficher les métriques (loss, perplexité)
     - _Requirements: 3.3, 3.4_
   
-  - [ ] 5.3 Ajouter les checkpoints d'entraînement
+
+
+  - [x] 5.3 Ajouter les checkpoints d'entraînement
+
+
+
+
+
     - Sauvegarder le modèle périodiquement
     - Sauvegarder l'état de l'optimiseur
+
+
     - _Requirements: 3.5_
   
-  - [ ] 5.4 Créer un exemple d'entraînement
+
+
+  - [x] 5.4 Créer un exemple d'entraînement
+
+
+
     - Créer python/exemples/exemple_training.py
     - Charger un dataset d'exemple
     - Entraîner le modèle sur quelques epochs
