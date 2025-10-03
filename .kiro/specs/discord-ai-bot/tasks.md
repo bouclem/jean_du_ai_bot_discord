@@ -1,49 +1,80 @@
 # Implementation Plan
 
-- [ ] 1. Créer la structure du projet et les fichiers de configuration
+- [x] 1. Créer la structure du projet et les fichiers de configuration
+
+
+
+
+
   - Créer l'arborescence complète des dossiers (bot/, python/, docs/, etc.)
   - Créer requirements.txt avec les dépendances (discord.py, numpy)
   - Créer .env.example pour la configuration
   - Créer .gitignore pour exclure les fichiers sensibles
   - _Requirements: 5.1, 7.1_
 
-- [ ] 2. Implémenter le tokenizer
-  - [ ] 2.1 Créer la classe Tokenizer de base
+- [x] 2. Implémenter le tokenizer
+
+
+
+
+  - [x] 2.1 Créer la classe Tokenizer de base
+
+
     - Implémenter __init__, encode(), decode()
     - Implémenter build_vocab() pour construire le vocabulaire à partir de textes
     - Gérer les tokens spéciaux ([PAD], [UNK], [BOS], [EOS])
     - _Requirements: 2.3_
   
-  - [ ] 2.2 Ajouter la persistence du vocabulaire
+
+  - [x] 2.2 Ajouter la persistence du vocabulaire
+
+
     - Implémenter save_vocab() et load_vocab()
     - Utiliser JSON pour stocker le vocabulaire
     - _Requirements: 2.5_
   
-  - [ ] 2.3 Créer les tests unitaires du tokenizer
+
+  - [x] 2.3 Créer les tests unitaires du tokenizer
+
     - Tester encoding/decoding basique
     - Tester les tokens spéciaux
     - Tester la sauvegarde/chargement du vocabulaire
     - _Requirements: 6.1, 6.2_
 
-- [ ] 3. Implémenter l'architecture Transformer
-  - [ ] 3.1 Créer la classe MultiHeadAttention
+- [x] 3. Implémenter l'architecture Transformer
+
+
+
+
+  - [x] 3.1 Créer la classe MultiHeadAttention
+
+
     - Implémenter le mécanisme d'attention scaled dot-product
     - Implémenter les projections Q, K, V
     - Implémenter la concaténation des têtes multiples
     - _Requirements: 2.1_
+
+
   
-  - [ ] 3.2 Créer la classe FeedForward
+  - [x] 3.2 Créer la classe FeedForward
+
     - Implémenter le réseau feed-forward à 2 couches
+
+
     - Ajouter l'activation GELU ou ReLU
     - _Requirements: 2.1_
   
-  - [ ] 3.3 Créer la classe TransformerBlock
+
+  - [x] 3.3 Créer la classe TransformerBlock
+
+
     - Combiner MultiHeadAttention et FeedForward
     - Ajouter layer normalization et connexions résiduelles
     - Implémenter dropout
     - _Requirements: 2.1, 2.2_
   
-  - [ ] 3.4 Créer les tests unitaires des composants Transformer
+  - [x] 3.4 Créer les tests unitaires des composants Transformer
+
     - Tester MultiHeadAttention avec des entrées simples
     - Tester FeedForward
     - Tester TransformerBlock complet
