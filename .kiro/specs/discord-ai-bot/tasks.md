@@ -165,65 +165,100 @@
     - Sauvegarder le modèle entraîné
     - _Requirements: 5.2, 6.2_
 
-- [ ] 6. Implémenter le système de mémoire conversationnelle
-  - [ ] 6.1 Créer la classe ConversationMemory
+- [x] 6. Implémenter le système de mémoire conversationnelle
+
+
+
+
+
+
+  - [x] 6.1 Créer la classe ConversationMemory
+
     - Implémenter add_message() pour ajouter des messages
     - Implémenter get_context() pour récupérer l'historique
     - Gérer la fenêtre de contexte (limiter à N messages)
     - Organiser par channel_id
     - _Requirements: 4.1, 4.2, 4.3_
   
-  - [ ] 6.2 Ajouter la persistence de la mémoire
+  - [x] 6.2 Ajouter la persistence de la mémoire
+
+
+
     - Implémenter save_to_disk() en JSON
     - Implémenter load_from_disk()
     - Gérer les erreurs de fichier corrompu
     - _Requirements: 4.4_
   
-  - [ ] 6.3 Créer les tests unitaires de la mémoire
+  - [x] 6.3 Créer les tests unitaires de la mémoire
+
+
     - Tester ajout et récupération de messages
     - Tester la gestion de la fenêtre de contexte
     - Tester la persistence
     - _Requirements: 6.4_
 
-- [ ] 7. Implémenter le moniteur d'inactivité
-  - [ ] 7.1 Créer la classe InactivityMonitor
+- [x] 7. Implémenter le moniteur d'inactivité
+
+
+
+
+  - [x] 7.1 Créer la classe InactivityMonitor
+
+
     - Tracker le dernier message par canal (timestamp)
     - Implémenter check_inactivity() pour vérifier le timeout
     - Implémenter update_activity() pour mettre à jour le timestamp
     - _Requirements: 1.6_
   
-  - [ ] 7.2 Ajouter les messages de solitude
+
+  - [x] 7.2 Ajouter les messages de solitude
+
+
     - Créer get_lonely_message() qui retourne des variantes
     - Exemples: "hello? ya quelqu'un? jsuis tous seul j'ai peur"
     - _Requirements: 1.6_
 
-- [ ] 8. Implémenter le bot Discord
-  - [ ] 8.1 Créer la classe BotConfig
+- [x] 8. Implémenter le bot Discord
+
+
+
+
+  - [x] 8.1 Créer la classe BotConfig
+
+
     - Charger les variables d'environnement
     - Valider la configuration
     - Gérer les valeurs par défaut
     - _Requirements: 7.1, 7.2, 7.3_
   
-  - [ ] 8.2 Créer la classe JeanDeAIBot
+  - [x] 8.2 Créer la classe JeanDeAIBot
+
+
     - Initialiser le client Discord
     - Charger le modèle GPT et la mémoire
     - Implémenter on_ready() pour confirmer la connexion
     - _Requirements: 1.1, 7.4_
   
-  - [ ] 8.3 Implémenter la détection et traitement des messages
+
+  - [x] 8.3 Implémenter la détection et traitement des messages
+
     - Implémenter on_message() pour détecter les messages
     - Filtrer les messages du bot lui-même
     - Implémenter should_respond() avec logique de probabilité
     - _Requirements: 1.2, 1.3, 1.7_
   
-  - [ ] 8.4 Implémenter la génération de réponses
+  - [x] 8.4 Implémenter la génération de réponses
+
+
     - Créer generate_response() qui utilise le modèle GPT
     - Récupérer le contexte depuis ConversationMemory
     - Formater le prompt avec l'historique
     - Ajouter la réponse à la mémoire
     - _Requirements: 1.4, 4.2_
   
-  - [ ] 8.5 Envoyer les réponses sur Discord
+  - [x] 8.5 Envoyer les réponses sur Discord
+
+
     - Envoyer la réponse générée dans le canal
     - Gérer les erreurs d'envoi (rate limiting, permissions)
     - _Requirements: 1.5_
